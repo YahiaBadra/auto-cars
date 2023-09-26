@@ -1,0 +1,28 @@
+<div class="container my-5 mx-1">
+  <h1 class="text-center" style="color: blue">Rieker Cars</h1>
+  <h4 style="color: darkturquoise">List of Users with Cars</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Car</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>
+          {{ employee.firstName }}
+        </td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.car }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="onClickPanne(employee.id)">
+            Panne
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

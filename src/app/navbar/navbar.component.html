@@ -1,0 +1,10 @@
+<h1>navbar</h1>
+<div class="topnav">
+  <a class="active" routerLink="/home">Home</a>
+  <a routerLink="/contact">Contact</a>
+</div>
+<div>
+  <h2>{{ user.name }}</h2>
+  <p>{{ user.sexe }}</p>
+  <img [src]="user.imgurl" />
+</div>

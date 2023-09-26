@@ -1,0 +1,32 @@
+<main class="login-main">
+  <section class="card-login">
+    <h1>Login</h1>
+    <div class="container">
+      <input
+        [(ngModel)]="email"
+        placeholder="Enter your Email"
+        class="input"
+        type="text"
+      />
+      <br />
+      <input
+        [(ngModel)]="pass"
+        placeholder="Enter your password"
+        class="input"
+        type="password"
+      />
+      <br />
+      <button
+        class="btn login btn-blue"
+        (click)="login()"
+      >
+        LOGIN
+      </button>
+
+      <button class="btn" (click)="register()">Register</button>
+    </div>
+  </section>
+</main>
+
+<!-- one way data binding (event propery {{}}) -->
+<!-- ngmodel  -->
