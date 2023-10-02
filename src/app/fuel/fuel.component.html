@@ -1,0 +1,41 @@
+<div class="container mt-3">
+  <!-- <h1 class="text-center">My Car</h1> -->
+
+  <div class="row mt-4">
+    <div class="col-lg-6 col-md-12 m-auto">
+      <div class="card">
+        <div class="card-header">
+          <input
+            [(ngModel)]="car.fuel"
+            type="number"
+            class="form-control"
+            placeholder="Add fuel by litre 1L"
+          />
+        </div>
+
+        <img
+          [src]="car.img"
+          class="card-img-top"
+          alt="Car 1"
+          style="max-width: 600px; max-height: 300px"
+        />
+
+        <div class="card-body">
+          <h5 class="card-title">{{ car.model }}</h5>
+          <ul class="list-group">
+            <li class="list-group-item">Engine Type: {{ car.engine }}</li>
+            <li class="list-group-item">
+              Transmission: {{ car.transmission }}
+            </li>
+            <li class="list-group-item">Color: {{ car.color }}</li>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <h3>Fuel Consumption Information</h3>
+          <p>Average Fuel Consumption: {{ car.avgcfuel }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,33 +1,40 @@
 <div class="container my-5 mx-1">
   <h4 class="container my-4" style="color: darkturquoise">
-    Add a Photo of a Broken-Down Car
+    Add a Breakdown Car ({{ employee?.firstName }} {{ employee?.lastName }}) -
+    ({{ employee?.car }})
   </h4>
   <div class="row">
     <div class="col-md-6">
-      <form>
+      <div>
         <div class="form-group">
-          <label for="carModel">Car Model:</label>
+          <label for="carModel">Issue Title: </label>
           <input
             type="text"
+            [(ngModel)]="title"
             class="form-control mt-2"
-            id="carModel"
-            placeholder="Enter the car model"
+            placeholder="Enter the car issue title"
           />
         </div>
         <div class="form-group mt-3">
           <label for="carIssue">Issue Description:</label>
           <textarea
             class="form-control mt-2"
-            id="carIssue"
+            [(ngModel)]="body"
             rows="4"
             placeholder="Describe the car issue"
           ></textarea>
         </div>
         <div class="form-group mt-3">
-          <input type="file" class="form-control-file" id="carImage" />
+          <input type="file" class="form-control-file" [(ngModel)]="photo" />
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Add Photo</button>
-      </form>
+        <button
+          type="submit"
+          class="btn btn-primary mt-3"
+          (click)="addBreakdown()"
+        >
+          Add Issue
+        </button>
+      </div>
     </div>
   </div>
 </div>

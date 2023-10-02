@@ -34,3 +34,7 @@ button {
 .link-btn {
   margin-bottom: 10px;
 }
+
+.btn-text{
+  cursor: pointer;
+}

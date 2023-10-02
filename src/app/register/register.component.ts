@@ -2,32 +2,28 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
 })
-export class LoginComponent {
+export class RegisterComponent {
+  name = '';
   email = '';
   pass = '';
 
   constructor(private router: Router) {}
 
-  login() {
-    if (!this.validEmail(this.email)) {
+  register() {
+    if (this.name.length <= 0) {
+      alert('Please enter your name');
+    } else if (!this.validEmail(this.email)) {
       alert('Invalid Email');
     } else if (this.pass.length <= 0) {
       alert('Please enter password');
     } else {
-      localStorage.setItem('token', this.email);
-
-      alert('Successfully logged in.');
-
+      alert('Successfully registered in.');
       this.router.navigate(['/home']);
     }
-  }
-
-  register() {
-    this.router.navigate(['/register']);
   }
 
   validEmail(email: string) {

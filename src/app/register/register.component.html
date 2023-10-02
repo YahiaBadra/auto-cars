@@ -1,0 +1,34 @@
+<main class="register-main">
+  <section class="card-register">
+    <h1>Create account</h1>
+    <div class="container">
+      <input
+        [(ngModel)]="name"
+        placeholder="Enter your name"
+        class="input"
+        type="text"
+      />
+      <input
+        [(ngModel)]="email"
+        placeholder="Enter your email"
+        class="input"
+        type="text"
+      />
+
+      <input
+        [(ngModel)]="pass"
+        placeholder="Enter your password"
+        class="input"
+        type="password"
+      />
+      <br />
+      <button class="btn register btn-blue" (click)="register()">
+        Register
+      </button>
+
+      <a class="text-underline mt-3" [routerLink]="'/login'">
+        Already have an account!
+      </a>
+    </div>
+  </section>
+</main>

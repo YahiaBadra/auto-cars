@@ -10,12 +10,23 @@ export class AppComponent {
   showSideNav = true;
   constructor(router: Router) {
     router.events.subscribe((event) => {
-      if (router.url === '/' || router.url === '/not-found') {
+      if (
+        router.url === '/login' ||
+        router.url === '/register' ||
+        router.url === '/not-found'
+      ) {
         this.showSideNav = false;
       } else {
         this.showSideNav = true;
       }
-      console.log(this.showSideNav);
     });
   }
 }
+
+/*
+TODO : alert should be replaced by real component/s
+Loading
+Update 
+Delete
+Scrolling infinite list
+*/

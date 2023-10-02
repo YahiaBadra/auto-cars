@@ -6,11 +6,23 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LscarComponent } from './lscar/lscar.component';
 import { CarBreakdownComponent } from './car-breakdown/car-breakdown.component';
+import { RegisterComponent } from './register/register.component';
+import { BreakdownlistComponent } from './breakdownlist/breakdownlist.component';
+import { RepairedComponent } from './repaired/repaired.component';
+import { FuelComponent } from './fuel/fuel.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
   },
   {
     path: 'contact',
@@ -20,18 +32,36 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  // {
+  //   path: '',
+  //   pathMatch: 'full',
+  //   redirectTo: 'home',
+  // },
   {
     path: 'cars',
     component: LscarComponent,
   },
   {
     path: 'breakdown',
-    component:CarBreakdownComponent,
+    component: CarBreakdownComponent,
+  },
+  {
+    path: 'breakdownList',
+    component: BreakdownlistComponent,
+  },
+  {
+    path: 'repaired',
+    component: RepairedComponent,
+  },
+  {
+    path: 'fuel',
+    component: FuelComponent,
   },
   {
     path: 'not-found',
     component: NotFoundComponent,
   },
+
   {
     path: '**',
     redirectTo: 'not-found',

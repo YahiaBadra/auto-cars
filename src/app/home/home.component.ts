@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { NavigationExtras, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,20 +11,31 @@ export class HomeComponent {
 
   employees = [
     {
-      id: 1,
+      userId: 1,
       firstName: 'John',
       lastName: 'Doe',
       car: 'Toyota Camry',
     },
     {
-      id: 2,
+      userId: 2,
       firstName: 'Jane',
       lastName: 'Smith',
       car: 'Honda Civic',
     },
   ];
 
-  onClickPanne(id: number) {
-    this.router.navigate(['breakdown', { id: id }]);
+  onClickPanne(employee: {
+    userId: number;
+    firstName: string;
+    lastName: string;
+    car: string;
+  }) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        employee: employee,
+      },
+    };
+
+    this.router.navigate(['breakdown'], navigationExtras);
   }
 }
