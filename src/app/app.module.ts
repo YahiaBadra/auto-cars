@@ -17,6 +17,7 @@ import { RegisterComponent } from './register/register.component';
 import { BreakdownlistComponent } from './breakdownlist/breakdownlist.component';
 import { RepairedComponent } from './repaired/repaired.component';
 import { FuelComponent } from './fuel/fuel.component';
+import { DestinationComponent } from './destination/destination.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FuelComponent } from './fuel/fuel.component';
     BreakdownlistComponent,
     RepairedComponent,
     FuelComponent,
+    DestinationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
